@@ -1,0 +1,30 @@
+.cartebody{
+    height: 300px;
+    margin-left: 30%;
+    border: 2px solid lightgray;
+    border-radius: 1em;
+    padding: 1em;
+
+}
+
+
+.cardimage{
+    height: 150px;
+    background-color: red;
+}
+
+.guessbox{
+    padding: 0.5em;
+    border-radius: 0.3em;
+    margin-bottom: 1em;
+    border:2px solid lightgray;
+    border-radius: 0.5em;
+}
+
+.guessbutton{
+    width: 10em;
+    padding: 0.8em;
+    background-color: rgb(121, 184, 107);
+    border-radius: 0.5em;
+    border: none;
+}
