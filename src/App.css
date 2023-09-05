@@ -2,6 +2,9 @@
 @import './CSS/footer.css';
 @import './CSS/acceuil.css';
 @import './CSS/carte.css';
+@import './CSS/connexion.css';
+@import './CSS/equipe.css';
+@import './CSS/carteHome.css';
 
 .App {
   text-align: center;

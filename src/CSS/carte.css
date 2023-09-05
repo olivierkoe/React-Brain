@@ -1,6 +1,6 @@
 .cartebody{
     height: 300px;
-    margin-left: 30%;
+    margin: auto;
     border: 2px solid lightgray;
     border-radius: 1em;
     padding: 1em;
@@ -10,7 +10,7 @@
 
 .cardimage{
     height: 150px;
-    background-color: red;
+
 }
 
 .guessbox{

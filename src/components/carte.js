@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 export default function carte() {
     return (
         <Card className='cartebody' style={{ width: '18rem' }}>
-            <Card.Img className='cardimage' variant="top" src='' alt='' />
+            <Card.Img className='cardimage' variant="top" src='' alt='image Carte' />
             <Card.Body>
                 <Card.Title>Qui suis-je ?</Card.Title>
                 <Card.Text>

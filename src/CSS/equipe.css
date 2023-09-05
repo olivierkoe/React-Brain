@@ -1,0 +1,21 @@
+.cadrelist{
+    text-align: center;
+}
+
+h1{
+    text-transform: uppercase;
+    color:rgb(62, 62, 171) ;
+}
+
+.tabequipe{
+margin: auto;
+}
+
+.tabtitle{
+
+    min-width: 250px;
+}
+
+.tabborder{
+    padding: 1em;
+}
