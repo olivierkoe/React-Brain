@@ -2,13 +2,37 @@
 
 export async function getRank() {
     const result = await fetch("http://localhost:3000/api/rank")
-        // .then(response => {
-        //     response.json()
-        //         .then(data => {
-        //             console.log("data", data)
-        //         })
-    
-    return result.json()
+    return new Promise((resolve, reject) => {
+        const ranksArray = [];
+        let requestToDo = 0;
+        let requestDone = 0;
+        result.json().then(ranks => {
+            ranks.map((rank, index) => {
+                if (rank.user !== undefined) {
+                    requestToDo++;
+                    fetch("http://localhost:3000" + rank.user, {
+                        method: "GET", headers: { 'Content-Type': "application/json" }
+                    }).then(response => {
+                        response.json()
+                            .then(user => {
+                                console.log("user", user)
+                                resolve(ranksArray)
+                                rank.user = user;
+                                requestDone++;
+                                if (requestToDo === requestDone) {
+                                    resolve(ranksArray)
+                                }
+                            })
+                    })
+                }
+                ranksArray.push(rank)
+            })
+            if (requestToDo === requestDone) {
+                resolve(ranksArray)
+            }
+            
+        })
+    })
 }
 
 // function renderToken(data) {
