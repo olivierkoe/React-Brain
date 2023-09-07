@@ -1,38 +1,30 @@
-export async function getTasks() {
-    const response = await fetch("http://localhost:8080/tasks", {
-        method: "GET"
-    });
-    return await response.json()
+// import React, { Component } from 'react'
+
+export async function getRank() {
+    const result = await fetch("http://localhost:3000/api/rank")
+        // .then(response => {
+        //     response.json()
+        //         .then(data => {
+        //             console.log("data", data)
+        //         })
+    
+    return result.json()
 }
 
-export async function postTask(task) {
-    // console.log(JSON.stringify(task)),
-    await fetch("http://localhost:8080/task", {
-        method: "POST",
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(task),
+// function renderToken(data) {
+//     const setup = document.getElementById("setup");
+//     const punchline = document.getElementById("punchline");
+//     setup.innerHTML = data.setup;
+//     punchline.innerHTML = data.punchline;
+//   }
+
+export async function getToken() {
+    fetch("http://localhost:3000/api/authentication_token", {
+        method: "POST", body: JSON.stringify({
+            email: "admin@express-brains.local",
+            password: "admin"
+        }), headers: { 'Content-Type': "application/json" }
     })
-}
-
-export async function updateTask(task) {
-    // console.log(JSON.stringify(task._id)),
-    await fetch(`http://localhost:8080/task/${task._id}`, {
-        method: "PUT",
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(task)
-    })
-}
-
-export async function deleteTask(task) {
-    console.log(task._id)
-    try {
-        await fetch(`http://localhost:8080/task/${task._id}`, {
-            method: 'DELETE'
-
-        })
-    } catch (err) {
-        console.log("deleteTask : ", err.message);
-    }
-    // Appel dans un composant
-    // await deleteTask(task)
+        .then(response => response.json()
+            .then(data => console.log(data)))
 }

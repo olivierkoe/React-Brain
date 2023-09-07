@@ -1,6 +1,6 @@
 import React from "react";
 
-export const TaskContext = React.createContext()
+export const RankContext = React.createContext()
 
 // Usage: 
 // import

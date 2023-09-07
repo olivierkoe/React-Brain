@@ -17,7 +17,7 @@
 }
 .links{
     display: grid;
-    grid-template-columns: 20% 35% 350% 0%;
+    grid-template-columns: 20% 35% 250% 0%;
 
 }
 .navlink{  

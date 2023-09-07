@@ -1,12 +1,12 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
-import './../assets/images/panneauInterrogation.jpg';
+import Image from './../assets/images/panneauInterrogation.jpg';
 import Card from 'react-bootstrap/Card';
 
 export default function carte() {
     return (
         <Card className='cartebody' style={{ width: '18rem' }}>
-            <Card.Img className='cardimage' variant="top" src='' alt='image Carte' />
+            <Card.Img className='cardimage' variant="top" src={Image} alt='image Carte' />
             <Card.Body>
                 <Card.Title>Qui suis-je ?</Card.Title>
                 <Card.Text>
