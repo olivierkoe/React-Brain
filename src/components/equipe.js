@@ -1,25 +1,43 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import { getTeams } from './data'
 
-export default function equipe() {
+export const Equipes = () => {
+
+    const [teams, setTeams] = useState([]);
+
+    useEffect(() => {
+        getTeams().then(teams => {
+            setTeams(teams);
+        });
+    }, []);
+
+    // const Token = getToken()
+    // console.log(Token);
+
     return (
         <div className='cadrelist'>
             <h1>liste des équipes</h1>
             <table className='tabequipe'>
-                <tr>
+                <thead>
                     <tr className='tabtitle'>
                         <th>#</th>
                         <th>Nom</th>
                         <th>Membres</th>
                     </tr>
-                    <tbody>
-                        <tr className='tabborder'>
-                                <td><th >87083345-000c-4105-ae11-b5ed4554eba8</th></td>
-                                <td >The winners</td>
-                                <td >Jackson, Jacob</td>
-                        </tr>
-                    </tbody>
-                </tr>
+                </thead>
+                <tbody>
+                    {teams.map((team, i) => {
+                        return (
+                            <tr key={i} className='tabborder'>
+                                <td>{team['uuid']}</td>
+                                <td>{team['name']}</td>
+                                <td>{team.members}</td>
+                            </tr>
+                        );
+                    })}
+                </tbody>
             </table>
         </div>
     )
 }
+

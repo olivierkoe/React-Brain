@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container';
-import Carte from './carte'
+import {Carte} from './carte'
 
 export default function Jouer() {
     return (
