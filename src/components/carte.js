@@ -23,8 +23,8 @@ export const Carte = () => {
                 <Card.Text>
                     Quel nombre se cache derrière cette carte mistère ?
                 </Card.Text>
-                <input className='guessbox' value="?"></input><br />
-                <Button className='guessbutton' variant="primary">J'ai trouvé !</Button>
+                <input type='text' className='guessbox'></input><br />
+                <Button type='submit' className='guessbutton' variant="primary">J'ai trouvé !</Button>
             </Card.Body>
         </Card>
     );
