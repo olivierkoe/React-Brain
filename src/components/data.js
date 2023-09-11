@@ -80,7 +80,6 @@ export async function getUsers() {
     console.log(token);
     var myHeaders = new Headers();
     myHeaders.append(token);
-    // myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjVlY2M2YzJhYTAwYWEzZTg2OThhOCIsImVtYWlsIjoiYWRtaW5AZXhwcmVzcy1icmFpbnMubG9jYWwiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTQyNzQ3NDgsImV4cCI6MTY5NDI4NTU0OH0.khWpQ3Y2vydQKy84n4yfDQNmK37QRcIFEQBBOLXB_0k");
     myHeaders.append("Cookie", "connect.sid=s%3ABx70O77sP5H8rvbxXD6o7-5g2ByLIZCN.2MCdW7BJ362ixq0GZkVoXINIdmqf1eNxWJW4vaX8uV0");
 
     var raw = JSON.stringify({
@@ -103,6 +102,7 @@ export async function getUsers() {
 
 //Récupère le token
 export async function getToken(email, password) {
+
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Cookie", "connect.sid=s%3AEAhUyIwP3h4GHFRXy-BHizd-BtKrfVy8.10htez%2B15E7skjr6vlD1q%2B1z%2FZc6LsG4cB26II8QArk");
@@ -122,7 +122,7 @@ export async function getToken(email, password) {
     fetch("http://localhost:3000/api/authentication_token", requestOptions)
         .then(response => response.text())
         .then(result => console.log(JSON.parse(result).access_token));
-        // .catch(error => console.log('error', error));
+    // .catch(error => console.log('error', error));
 }
 
 
