@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Image from './../assets/images/panneauInterrogation.jpg';
 import Card from 'react-bootstrap/Card';
-import { PlayGame } from './data';
+// import { PlayGame } from './data';
 
 // console.log(PlayGame());
 
 export const Carte = () => {
-    const [games, setGames] = useState([]);
+    // const [games, setGames] = useState([]);
 
-    useEffect(() => {
-        PlayGame().then(games => {
-            setGames(games);
-        });
-    });
+    // useEffect(() => {
+    //     PlayGame().then(games => {
+    //         setGames(games);
+    //     });
+    // });
 
     return (
         <Card className='cartebody' style={{ width: '18rem' }}>

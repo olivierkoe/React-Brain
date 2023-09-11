@@ -3,15 +3,15 @@ import Navbar from './components/Navbar';
 import Accueil from './components/accueil'
 import Jouer from './components/jouer'
 import Footer from './components/Footer';
+import Connexion from './components/connexion';
 import { Classement } from './components/classement';
-import Login from './components/connexion';
-import {Equipes} from './components/equipe';
+import { Equipes } from './components/equipe';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 
 const App = () => {
-
   return (
+
     <>
       <Router>
         <Navbar />
@@ -20,7 +20,7 @@ const App = () => {
           <Route path='/jouer' element={<Jouer />} />
           <Route path='/classement' element={<Classement />} />
           <Route path='/equipe' element={<Equipes />} />
-          <Route path='/login' element={<Login />} />
+          <Route path='/connexion' element={<Connexion />} />
         </Routes>
       </Router>
       <Footer />

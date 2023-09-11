@@ -13,6 +13,7 @@
     "clean": "^4.0.2",
     "grid": "^4.10.8",
     "react": "^18.2.0",
+    "react-auth-kit": "^2.12.6",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0",
