@@ -81,7 +81,6 @@ export async function getUsers() {
     var myHeaders = new Headers();
     myHeaders.append(token);
     myHeaders.append("Cookie", "connect.sid=s%3ABx70O77sP5H8rvbxXD6o7-5g2ByLIZCN.2MCdW7BJ362ixq0GZkVoXINIdmqf1eNxWJW4vaX8uV0");
-
     var raw = JSON.stringify({
         "email": "admin@express-brains.local",
         "password": "admin"
