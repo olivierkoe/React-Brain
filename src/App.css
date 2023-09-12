@@ -5,6 +5,7 @@
 @import './CSS/connexion.css';
 @import './CSS/equipe.css';
 @import './CSS/carteHome.css';
+@import './CSS/loginSignup.css';
 
 .App {
   text-align: center;

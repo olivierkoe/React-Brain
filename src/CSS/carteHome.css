@@ -14,11 +14,15 @@
     margin-top: 1em;
     font-weight: bolder;
     font-size: 1.5em;
+    margin-bottom: 0.5em;
 }
 
 .playbutton{
-    background: rgb(172, 201, 129);
+    background:rgb(121, 184, 107);
     font-size: 1em;
-    margin-top:1em;
-    width: 100px;
+    color: black;
+    text-decoration: none;
+    padding: 0.3em 3em;
+    border-radius: 0.3em;
 }
+

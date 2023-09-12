@@ -1,7 +1,8 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Image from './../assets/images/panneauInterrogation.jpg';
 import Card from 'react-bootstrap/Card';
+import { Link } from "react-router-dom";
 
 export default function carteHome() {
     return (
@@ -9,7 +10,7 @@ export default function carteHome() {
             <Card.Img className='cardimage' variant="top" src={Image} alt='image Carte' />
             <Card.Body>
                 <Card.Title className='cardTitle'>React Game</Card.Title>
-                <Button className='playbutton' variant="primary">Jouer</Button>
+                <Link to={"./Jouer "} className='playbutton' variant="primary">Jouer</Link>
             </Card.Body>
         </Card>
     );

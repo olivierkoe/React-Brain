@@ -11,8 +11,7 @@ export const Equipes = () => {
         });
     }, []);
 
-    // const Token = getToken()
-    // console.log(Token);
+    console.log(teams);
 
     return (
         <div className='cadrelist'>
@@ -27,11 +26,19 @@ export const Equipes = () => {
                 </thead>
                 <tbody>
                     {teams.map((team, i) => {
+                        // console.log(teams);
                         return (
+
                             <tr key={i} className='tabborder'>
                                 <td>{team['uuid']}</td>
                                 <td>{team['name']}</td>
-                                <td>{team.members}</td>
+                                <td>{team.members['']}</td>
+                                {team.members.map((user, index) => {
+                                    // console.log(user);
+                                    return (
+                                        <td key={index}>{user.nickname}</td>
+                                    );
+                                })}
                             </tr>
                         );
                     })}

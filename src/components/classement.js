@@ -12,6 +12,9 @@ export const Classement = () => {
         })
     }, []);
 
+
+
+
     return (
         <>
             <div className='cadrelist'>
@@ -28,13 +31,14 @@ export const Classement = () => {
                     </thead>
                     <tbody>
                         {ranks.map((rank, index) => {
+                            // console.log(rank);
                             return (
                                 <tr className='tabborder' key={index}>
                                     <td>{rank['uuid']}</td>
                                     <td>{rank['user'] ? rank['user']['nickname'] : 'Anonyme'}</td>
                                     <td>{rank['attempts']}</td>
                                     <td>{rank['time']} sec</td>
-                                    <td>? </td>
+                                    <td>{rank['numberToFind']} </td>
                                 </tr>
                             );
                         })}
