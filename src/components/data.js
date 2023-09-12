@@ -54,8 +54,9 @@ export async function getTeams() {
                         .then(response => {
                             response.json()
                                 .then(u => {
-                                    console.log(u)
+                                    // console.log(u)
                                     team.members[index] = u;
+                                    console.log(u)
                                     requestDone++;
                                     if (requestToDo === requestDone) {
                                         // console.log(teamsArray)
