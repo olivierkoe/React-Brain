@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getTeams } from './data'
+import { getTeams} from './data'
 
 export const Equipes = () => {
 
@@ -10,8 +10,6 @@ export const Equipes = () => {
             setTeams(teams);
         });
     }, []);
-
-    console.log(teams);
 
     return (
         <div className='cadrelist'>
@@ -26,19 +24,16 @@ export const Equipes = () => {
                 </thead>
                 <tbody>
                     {teams.map((team, i) => {
-                        // console.log(teams);
                         return (
-
                             <tr key={i} className='tabborder'>
-                                <td>{team['uuid']}</td>
-                                <td>{team['name']}</td>
-                                <td>{team.members['']}</td>
+                                <td ><strong>{team['uuid']}</strong></td>
+                                <td >{team['name']}</td>
                                 {team.members.map((user, index) => {
-                                    // console.log(user);
                                     return (
                                         <td key={index}>{user.nickname}</td>
                                     );
                                 })}
+
                             </tr>
                         );
                     })}

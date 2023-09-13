@@ -11,6 +11,7 @@ import './App.css'
 
 const App = () => {
 
+
   return (
 
     <>
@@ -26,6 +27,7 @@ const App = () => {
         </Routes>
       </Router>
       <Footer />
+
     </>
   )
 }

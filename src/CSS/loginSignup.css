@@ -94,6 +94,10 @@ border-radius: 9px;
     cursor: pointer;
 }
 
+.valider{
+    margin: auto;
+}
+
 .gray{
     background: #EAEAEA;
     color:rgb(62, 62, 171);

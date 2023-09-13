@@ -5,7 +5,6 @@
     background-color:rgb(62, 62, 171);
     display: flex;
     padding: 1.5em;
-
 }
 
 .navLinkBrand{
@@ -15,17 +14,20 @@
     color: white;
     justify-content: flex-start;
 }
+
 .links{
     display: grid;
     grid-template-columns: 20% 35% 250% 0%;
 
 }
+
 .navlink{  
-    margin-right: 1em;
     text-decoration: none;
     color: white;
 }
+
 .navlinklogin{
+    margin:  100px 60px;
     text-decoration: none;
     color: white;
 }
